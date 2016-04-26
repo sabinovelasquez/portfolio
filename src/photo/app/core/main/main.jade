@@ -1,2 +1,5 @@
-#top
-  photo-thumb
+.container
+  h2.text-center Sheets:
+  .col-sm-3(ng-repeat='case in main.cases' )
+    single-case(case='case')
+  

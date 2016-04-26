@@ -6,8 +6,8 @@ export default ngModule => {
       .state('main', {
         url: '/',
         template: require('../main/main.jade'),
-        // controller: 'MainCtrl',
-        // controllerAs: 'main',
+        controller: 'MainCtrl',
+        controllerAs: 'main',
       });
     }
   );

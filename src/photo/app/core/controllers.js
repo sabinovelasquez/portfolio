@@ -1,3 +1,3 @@
 export default ngModule => {
-  require('./main/photo-thumb/photo-thumb')(ngModule);
+  require('./main/controller')(ngModule);
 };
