@@ -1,7 +1,8 @@
 export default ngModule => {
   require('./case.scss');
 
-  ngModule.directive('singleCase', function singleCase() {
+  ngModule.directive('singleCase', function singleCase(FlickrAPIService) {
+
     return {
       template: require('./case.jade'),
       scope: {},
@@ -14,6 +15,18 @@ export default ngModule => {
         this.description = this.case.gsx$descripcion.$t;
         this.flickrid= this.case.gsx$flickrid.$t;
         this.category= this.case.gsx$categoria.$t;
+        this.cover = (id) => {
+          FlickrAPIService.getCover(id).then(function (response) {
+            return response.data.sizes.size[10].source;
+          });
+        }
+        FlickrAPIService
+          .getAlbum(this.flickrid)
+          .then(response => {
+            //Cover = first photo in Album
+            const coverId = response.data.photoset.photo[0].id;
+            this.cover(coverId);
+          });
       },
     };
   });

@@ -7,5 +7,6 @@ export default ngModule => {
       .then(response => {
         this.cases = response.data.feed.entry;
       })
+
   });
 };
