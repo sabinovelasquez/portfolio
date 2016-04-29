@@ -10,5 +10,4 @@ export default ngModule => {
     };
     return service;
   });
-
 };
