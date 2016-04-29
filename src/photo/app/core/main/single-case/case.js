@@ -17,7 +17,6 @@ export default ngModule => {
         this.cover = (id) => {
           FlickrAPIService.getCover(id).then(response => {
             this.coverUrl = response.data.sizes.size[10].source;
-            console.log(this.coverUrl);
           });
         };
         FlickrAPIService
