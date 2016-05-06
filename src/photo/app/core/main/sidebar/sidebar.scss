@@ -1,0 +1,27 @@
+@import '../../css/functions';
+@import '../../css/colors';
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background: $tur;
+  .cat{
+    .logo{
+      width: 90%;
+      margin: 40px auto;
+    }
+    ul.filters{
+      padding: 0;
+      li{
+        font-size: 1.5em;
+        line-height: 80px;
+        list-style: none;
+        color: white;
+        margin: 1px 0;
+      }
+    }
+  }
+}

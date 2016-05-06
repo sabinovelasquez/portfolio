@@ -1,0 +1,13 @@
+.sidebar
+  .cat
+    .logo
+      img.img-responsive(src='img/logo.png')
+    .loader(ng-show='!side.categories')
+      i.fa.fa-spinner.fa-spin
+    ul.filters
+      ul.filters
+        li.text-center(ng-repeat='item in side.menu')
+          i.fa(class='fa-{{item.icon}}')
+    //- ul.filters(ng-show='side.categories')
+    //-   li(ng-repeat='cat in side.categories')
+    //-     {{cat}}
