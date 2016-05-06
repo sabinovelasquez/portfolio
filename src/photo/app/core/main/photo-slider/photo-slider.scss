@@ -6,18 +6,37 @@
   width: 100%;
   height: 100%;
   .carousel-inner{
-    background:black;
     height: 100%;
+    background: black;
     .item{
       width: 100%;
       height: 100%;
       .cover{
         position: relative;
-        height: 90%;
-        margin-top: 2%;
-        background-repeat: no-repeat!important;
-        background-position: center!important;
-        background-size: contain!important;
+        width: 100%;
+        height: 100%;
+        img.main{
+          position: relative;
+          z-index: 2;
+          top: 2%;
+          max-height: 90%;
+          -webkit-box-shadow: 0 0 6px 0 rgba(black,.75);
+             -moz-box-shadow: 0 0 6px 0 rgba(black,.75);
+                  box-shadow: 0 0 6px 0 rgba(black,.75);
+        }
+        .bg{
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat!important;
+          background-position: center!important;
+          background-size: cover!important;
+
+          -webkit-filter: blur(5px);
+                  filter: blur(5px);
+        }
       }
     }
   }
@@ -25,7 +44,8 @@
 
 .actions{
   position: absolute;
-  bottom: 0px;
+  z-index: 3;
+  bottom: 90px;
   left: 50%;
   width: 320px;
   margin-left: -80px;

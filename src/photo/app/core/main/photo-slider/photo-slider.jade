@@ -1,4 +1,6 @@
-.cover(style='background:url("{{slider.coverUrl}}")')
+.cover
+  img.main.img-responsive.center-block(ng-src='{{slider.coverUrl}}')
+  .bg(style='background:url("{{slider.coverUrl}}")')
   .actions
     .enter
       | ver caso
