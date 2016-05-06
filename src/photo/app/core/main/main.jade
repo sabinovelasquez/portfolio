@@ -1,4 +1,7 @@
 sidebar-menu(categories='main.categories')
+.fullphoto(ng-repeat='case in main.cases' )
+    photo-slider(slider='case')
+  //- img.img-responsive()
   //- h2.text-center Sheets:
   //- .col-sm-3(ng-repeat='case in main.cases' )
   //-   single-case(case='case')
