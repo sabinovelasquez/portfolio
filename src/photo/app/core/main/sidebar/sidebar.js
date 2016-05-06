@@ -10,6 +10,7 @@ export default ngModule => {
       },
       controllerAs: 'side',
       controller: function sidebarMenuCtrl() {
+        this.page = 'home';
         this.menu = [{'icon': 'home'}, {'icon': 'camera'}, {'icon': 'envelope'}];
         // this.categories = this.categories;
       },

@@ -7,7 +7,8 @@
     ul.filters
       ul.filters
         li.text-center(ng-repeat='item in side.menu')
-          i.fa(class='fa-{{item.icon}}')
+          span(ng-class='{"active": side.page===item.icon}')
+            i.fa(class='fa-{{item.icon}}')
     //- ul.filters(ng-show='side.categories')
     //-   li(ng-repeat='cat in side.categories')
     //-     {{cat}}

@@ -6,15 +6,18 @@
   width: 100%;
   height: 100%;
   .carousel-inner{
+    background:black;
     height: 100%;
     .item{
       width: 100%;
       height: 100%;
       .cover{
-        height: 100%;
+        position: relative;
+        height: 90%;
+        margin-top: 2%;
         background-repeat: no-repeat!important;
         background-position: center!important;
-        background-size: cover!important;
+        background-size: contain!important;
       }
     }
   }
@@ -22,14 +25,14 @@
 
 .actions{
   position: absolute;
-  bottom: 100px;
+  bottom: 0px;
   left: 50%;
   width: 320px;
   margin-left: -80px;
   .enter,
   .explore{
     @include border-radius(5px);
-    @include transition(all .3s ease);
+    @include transition(background-color .3s ease);
 
     font-size: .8em;
     font-weight: 300;
