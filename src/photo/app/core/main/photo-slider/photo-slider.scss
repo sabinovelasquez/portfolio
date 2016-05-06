@@ -1,5 +1,49 @@
-.cover{
-  img{
-    max-height: 100%;
+@import '../../css/functions';
+@import '../../css/colors';
+
+.carousel{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  .carousel-inner{
+    height: 100%;
+    .item{
+      width: 100%;
+      height: 100%;
+      .cover{
+        height: 100%;
+        background-repeat: no-repeat!important;
+        background-position: center!important;
+        background-size: cover!important;
+      }
+    }
+  }
+}
+
+.actions{
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  width: 320px;
+  margin-left: -80px;
+  .enter,
+  .explore{
+    @include border-radius(5px);
+    @include transition(all .3s ease);
+
+    font-size: .8em;
+    font-weight: 300;
+    line-height: 40px;
+    width: 200px;
+    margin: 5px 0;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    border: 1px solid white;
+    background-color: rgba(black, .4);
+    &:hover{
+      background-color: $tur;
+    }
   }
 }

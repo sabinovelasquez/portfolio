@@ -3,11 +3,12 @@
 
 .sidebar{
   position: fixed;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 80px;
   height: 100%;
-  background: $tur;
+  background: lighten(black, 10);
   .cat{
     .logo{
       width: 90%;
@@ -18,9 +19,9 @@
       li{
         font-size: 1.5em;
         line-height: 80px;
+        margin: 1px 0;
         list-style: none;
         color: white;
-        margin: 1px 0;
       }
     }
   }
