@@ -1,9 +1,17 @@
 @import '../../css/functions';
 @import '../../css/colors';
 
+.covershow{
+  width: -webkit-calc(100% - 80px);
+  width:    -moz-calc(100% - 80px);
+  width:         calc(100% - 80px);
+}
+.carousel-indicators{
+  bottom: 0;
+}
 .carousel{
   position: absolute;
-  width: 100%;
+  left: 80px;
   height: 100%;
   .carousel-inner{
     height: 100%;
@@ -17,55 +25,50 @@
         img.main{
           position: relative;
           z-index: 2;
-          top: 2%;
+          top: 4%;
           max-height: 90%;
           -webkit-box-shadow: 0 0 100px 0 rgba(black,.75);
              -moz-box-shadow: 0 0 100px 0 rgba(black,.75);
                   box-shadow: 0 0 100px 0 rgba(black,.75);
         }
-        .bg{
-          position: absolute;
-          z-index: 1;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background-repeat: no-repeat!important;
-          background-position: center!important;
-          background-size: cover!important;
-
-          // -webkit-filter: blur(5px);
-          //         filter: blur(5px);
-        }
       }
     }
   }
 }
-
 .actions{
   position: absolute;
-  z-index: 3;
-  bottom: 90px;
-  left: 50%;
-  width: 320px;
-  margin-left: -80px;
   .enter,
   .explore{
-    @include border-radius(5px);
-    @include transition(background-color .3s ease);
-
-    font-size: .8em;
-    font-weight: 300;
-    line-height: 40px;
-    width: 200px;
-    margin: 5px 0;
-    cursor: pointer;
-    text-align: center;
+    color: black;
+  }
+}
+.info{
+  position: absolute;
+  z-index: 3;
+  right: 60px;
+  bottom: 100px;
+  width: 300px;
+  .name{
+    font-size: 1.3em;
+    font-weight: 100;
+    position: relative;
+    height: 46px;
+    padding: 10px;
+    text-align: right;
     text-transform: uppercase;
     color: white;
-    border: 1px solid white;
-    background-color: rgba(black, .4);
-    &:hover{
-      background-color: $tur;
+    border-right: $tur 4px solid;
+    background: $l-black;
+    &::before{
+      position: absolute;
+      top: 0;
+      left: -23px;
+      width: 0;
+      height: 0;
+      content: '';
+      border-top: 23px solid transparent;
+      border-right: 23px solid $l-black;
+      border-bottom: 23px solid transparent;
     }
   }
 }
